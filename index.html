@@ -9,7 +9,21 @@
 
     <!--laden von Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!--jQuery einbinden-->
+    <script src="js/jquery-3.7.1.min.js"></script>
 
+    <!--Script Tabelle durchsuchen-->
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        }); 
+    </script>
     </head>
 
 
@@ -84,40 +98,40 @@
                 <div>
                     <h2>Tabelle zum CO² Ausstoß</h2>
                     <p>Geben Sie etwas in das Eingabefeld ein, um die Tabelle zu durchsuchen:</p>
-                    <input type="text" name="suche" placeholder="Suchen..">
+                    <input id="myInput" type="text" name="suche" placeholder="Suchen..">
                     <br><br>
                 </div>
             </selection>
-        <div class="container d-flex justify-content-center table-responsive">
-            <table style="width:auto" class="table table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Land</th>
-                    <th>Unternehmen</th>
-                    <th>CO² Ausstoß in Prozent</th>
-                    <th>CO² Ausstoß in Millionen Tonnen</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>1</td><td>China</td><td>A</td><td>30,90</td><td>11471,27</td></tr>
-                  <tr><td>2</td><td>USA</td><td>F</td><td>13,49</td><td>5008,01</td></tr>
-                  <tr><td>3</td><td>Indien</td><td>G</td><td>7,30</td><td>2710,04</td></tr>
-                  <tr><td>4</td><td>Russland</td><td>D</td><td>4,73</td><td>1755,96</td></tr>
-                  <tr><td>5</td><td>Japan</td><td>C</td><td>2,88</td><td>1069,17</td></tr>
-                  <tr><td>6</td><td>Iran</td><td>O</td><td>2,02</td><td>749,90</td></tr>
-                  <tr><td>7</td><td>Deutschland</td><td>B</td><td>1,82</td><td>675,65</td></tr>
-                  <tr><td>8</td><td>Saudi-Arabien</td><td>H</td><td>1,81</td><td>671,94</td></tr>
-                  <tr><td>9</td><td>Indonesien</td><td>I</td><td>1,67</td><td>619,97</td></tr>
-                  <tr><td>10</td><td>Südkorea</td><td>M</td><td>1,66</td><td>616,26</td></tr>
-                  <tr><td>11</td><td>Kanada</td><td>K</td><td>1,47</td><td>545,72</td></tr>
-                  <tr><td>12</td><td>Brasilien</td><td>L</td><td>1,32</td><td>490,03</td></tr>
-                  <tr><td>13</td><td>Türkei</td><td>E</td><td>1,20</td><td>445,49</td></tr>
-                  <tr><td>14</td><td>Südafrika</td><td>N</td><td>1,17</td><td>434,35</td></tr>
-                  <tr><td>15</td><td>Mexiko</td><td>J</td><td>1,10</td><td>408,36</td></tr>
-                </tbody>
-              </table>
-        </div>
+            <div class="container d-flex justify-content-center table-responsive">
+                <table style="width:auto" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Land</th>
+                            <th>Unternehmen</th>
+                            <th>CO² Ausstoß in Prozent</th>
+                            <th>CO² Ausstoß in Millionen Tonnen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr><td>1</td><td>China</td><td>A</td><td>30,90</td><td>11471,27</td></tr>
+                        <tr><td>2</td><td>USA</td><td>F</td><td>13,49</td><td>5008,01</td></tr>
+                        <tr><td>3</td><td>Indien</td><td>G</td><td>7,30</td><td>2710,04</td></tr>
+                        <tr><td>4</td><td>Russland</td><td>D</td><td>4,73</td><td>1755,96</td></tr>
+                        <tr><td>5</td><td>Japan</td><td>C</td><td>2,88</td><td>1069,17</td></tr>
+                        <tr><td>6</td><td>Iran</td><td>O</td><td>2,02</td><td>749,90</td></tr>
+                        <tr><td>7</td><td>Deutschland</td><td>B</td><td>1,82</td><td>675,65</td></tr>
+                        <tr><td>8</td><td>Saudi-Arabien</td><td>H</td><td>1,81</td><td>671,94</td></tr>
+                        <tr><td>9</td><td>Indonesien</td><td>I</td><td>1,67</td><td>619,97</td></tr>
+                        <tr><td>10</td><td>Südkorea</td><td>M</td><td>1,66</td><td>616,26</td></tr>
+                        <tr><td>11</td><td>Kanada</td><td>K</td><td>1,47</td><td>545,72</td></tr>
+                        <tr><td>12</td><td>Brasilien</td><td>L</td><td>1,32</td><td>490,03</td></tr>
+                        <tr><td>13</td><td>Türkei</td><td>E</td><td>1,20</td><td>445,49</td></tr>
+                        <tr><td>14</td><td>Südafrika</td><td>N</td><td>1,17</td><td>434,35</td></tr>
+                        <tr><td>15</td><td>Mexiko</td><td>J</td><td>1,10</td><td>408,36</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
 
         </main>
