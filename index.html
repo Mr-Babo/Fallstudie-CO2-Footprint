@@ -7,13 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fallstudie CO2-Footprint</title>
 
-    <!--laden von Bootstrap-->
+    <!--Bootstrap einbinden-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <!--jQuery einbinden-->
     <script src="js/jquery-3.7.1.min.js"></script>
 
-    <!--Script Tabelle durchsuchen-->
+    <!--jQuery Plugin tablesorter einbinden-->
+    <script src="js/jquery.tablesorter.js"></script>
+
+    <!--jQuery Script Tabelle durchsuchen-->
     <script>
         $(document).ready(function(){
           $("#myInput").on("keyup", function() {
@@ -24,6 +27,14 @@
           });
         }); 
     </script>
+
+    <!--jQuery Script Tabelle sortieren-->
+    <script>
+        $(function() {
+          $("#mySorter").tablesorter();
+        });
+    </script>
+
     </head>
 
 
@@ -103,7 +114,7 @@
                 </div>
             </selection>
             <div class="container d-flex justify-content-center table-responsive">
-                <table style="width:auto" class="table table-bordered table-hover">
+                <table style="width:auto" id="mySorter" class="table table-bordered table-hover tablesorter">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -113,7 +124,7 @@
                             <th>CO² Ausstoß in Millionen Tonnen</th>
                         </tr>
                     </thead>
-                    <tbody id="myTable">
+                    <tbody id="myTable" class="table-group-divider">
                         <tr><td>1</td><td>China</td><td>A</td><td>30,90</td><td>11471,27</td></tr>
                         <tr><td>2</td><td>USA</td><td>F</td><td>13,49</td><td>5008,01</td></tr>
                         <tr><td>3</td><td>Indien</td><td>G</td><td>7,30</td><td>2710,04</td></tr>
