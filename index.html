@@ -51,21 +51,18 @@
         
         <!--Navigation-->
             <nav class="navbar navbar-expand-md rounded bg-dark navbar-dark container-fluid justify-content-center">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav d-flex flex-row-reverse">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Erklärung</a>
+                            <a href="#aboutus.html" class="nav-link">Über uns</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Ausstoß</a>
+                            <a href="#news.html" class="nav-link">News</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Tabelle</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Veränderung</a>
+                            <a href="#faq.html" class="nav-link">FAQ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Kontakt</a>
@@ -83,9 +80,25 @@
 
 
         <main>
+            <!-- Menü-->
+            <nav class="container my-3 navbar-expand-md d-flex flex-row">
+                <ul class="navbar">
+                    <li class="p-2 d-inline">
+                        <a href="#ErsterAbschnitt" class="nav-link">CO2 footprint erklärt</a>
+                    </li>
+                    <li class="p-2 d-inline">
+                        <a href="#ZweiterAbschnitt" class="nav-link">CO2 Ausstoß</a>
+                    </li>
+                    <li class="p-2 d-inline">
+                        <a href="#DritterAbschnitt" class="nav-link">Tabelle zum CO2 Ausstoß</a>
+                    </li>
+                </ul>
+            </nav>
+
+
             <!--Abschnitt 1--> 
             <section>
-                <h1>CO² footprint erklärt</h1>
+                <h1 id="ErsterAbschnitt">CO2 footprint erklärt</h1>
                 <p>Der Begriff "CO2-Fußabdruck" oder "Kohlendioxid-Fußabdruck" bezieht sich auf die Gesamtheit der Treibhausgasemissionen, insbesondere Kohlendioxid (CO2), die direkt oder indirekt mit den Aktivitäten, dem Lebensstil oder den Betriebsprozessen einer Person, eines Unternehmens oder einer Organisation verbunden sind. Dieser Fußabdruck umfasst eine breite Palette von Aktivitäten, darunter Energieverbrauch, Transport, Ernährungsgewohnheiten und vieles mehr.</p>
                 <p>Die Messung und Reduzierung des eigenen CO2-Fußabdrucks ist entscheidend im Kampf gegen den Klimawandel. Menschen und Unternehmen können ihren Kohlendioxid-Fußabdruck verringern, indem sie Maßnahmen wie den Einsatz energieeffizienter Geräte, das Fahren mit öffentlichen Verkehrsmitteln, das Teilen von Fahrten, den Konsum von lokal produzierten und nachhaltigen Produkten und die Unterstützung erneuerbarer Energiequellen ergreifen.</p>
                 <p>Das Verstehen und Verwalten des eigenen CO2-Fußabdrucks ist von großer Bedeutung, um die Auswirkungen der globalen Erwärmung zu mildern und den Übergang zu einer nachhaltigeren und umweltfreundlicheren Zukunft zu fördern.</p>
@@ -95,7 +108,7 @@
 
             <!--Abschnitt 2--> 
             <section>
-                <h1>CO² Ausstoß</h1>
+                <h1 id="ZweiterAbschnitt">CO² Ausstoß</h1>
                 <p>Der weltweite CO2-Ausstoß, auch als Kohlendioxid-Emissionen bezeichnet, ist ein entscheidender Faktor im Zusammenhang mit dem Klimawandel. CO2 ist ein Treibhausgas, das von verschiedenen menschlichen Aktivitäten, insbesondere der Verbrennung fossiler Brennstoffe wie Kohle, Öl und Gas, freigesetzt wird. Diese Emissionen sind ein wesentlicher Beitrag zur globalen Erwärmung und den damit verbundenen Umweltauswirkungen.</p>
                 <p>Der weltweite CO2-Ausstoß ist in den letzten Jahrzehnten dramatisch angestiegen, was auf das Wachstum der Weltbevölkerung, die Industrialisierung und den steigenden Energiebedarf zurückzuführen ist. Länder wie China, die Vereinigten Staaten, Indien und die Europäische Union sind unter den größten Emittenten von CO2. Diese Emissionen tragen dazu bei, die Durchschnittstemperaturen auf der Erde zu erhöhen, was zu verheerenden Auswirkungen wie häufigeren Extremwetterereignissen, steigendem Meeresspiegel, Artenverlust und mehr führt.</p>
                 <p>Die internationale Gemeinschaft hat sich zunehmend darauf geeinigt, Maßnahmen zur Reduzierung des weltweiten CO2-Ausstoßes zu ergreifen, um die Klimaerwärmung auf ein erträgliches Maß zu begrenzen. Das Pariser Abkommen von 2015 ist ein wichtiger Meilenstein in diesen Bemühungen, da es die Verpflichtung der Länder zur Begrenzung ihrer CO2-Emissionen festlegt. Es ist von entscheidender Bedeutung, den CO2-Ausstoß weltweit zu reduzieren, indem erneuerbare Energiequellen gefördert, die Energieeffizienz verbessert und die Entwaldung gestoppt wird.</p>
@@ -107,21 +120,21 @@
             <!--Abschnitt 3 Tabellenüberschrift-->
             <selection class="text-center">
                 <div>
-                    <h2>Tabelle zum CO² Ausstoß</h2>
+                    <h2 id="DritterAbschnitt">Tabelle zum CO2 Ausstoß</h2>
                     <p>Geben Sie etwas in das Eingabefeld ein, um die Tabelle zu durchsuchen:</p>
                     <input id="myInput" type="text" name="suche" placeholder="Suchen..">
                     <br><br>
                 </div>
             </selection>
-            <div class="container d-flex justify-content-center table-responsive">
+            <div align="center" class=" table-responsive">
                 <table style="width:auto" id="mySorter" class="table table-bordered table-hover tablesorter">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Land</th>
                             <th>Unternehmen</th>
-                            <th>CO² Ausstoß in Prozent</th>
-                            <th>CO² Ausstoß in Millionen Tonnen</th>
+                            <th>CO2 Ausstoß in Prozent</th>
+                            <th>CO2 Ausstoß in Millionen Tonnen</th>
                         </tr>
                     </thead>
                     <tbody id="myTable" class="table-group-divider">
@@ -149,8 +162,13 @@
 
 
         <footer>
-
-
+            <div class="bg-dark text-white text-center">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link active" href="aboutus.html">Über uns</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="privacy.html">Datenschutz</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="imprint.html">Impressum</a></li>
+              </ul>
+            </div>
         </footer>
         
 
