@@ -51,7 +51,7 @@
         
         <!--Navigation-->
             <nav class="navbar navbar-expand-md rounded bg-dark navbar-dark container-fluid justify-content-center">
-                    <ul class="navbar-nav d-flex flex-row-reverse">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -69,17 +69,18 @@
                         </li>
                         <li>
                             <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Suchen" aria-label="Suchen">
-                            <button class="btn btn-outline-success" type="submit">Suchen</button>
+                                <input class="form-control me-2" type="search" name="Suche" placeholder="Suchen" aria-label="Suchen">
+                                <button class="btn btn-outline-success" type="submit">Suchen</button>
                             </form>
                         </li>
                     </ul>
             </nav>
             
+            <h1></h1>           
         </header>
 
 
-        <main>
+        <main class="m-4">
             <!-- Menü-->
             <nav class="container my-3 navbar-expand-md d-flex flex-row">
                 <ul class="navbar">
@@ -174,5 +175,19 @@
 
     </body>
 
+
+    <script type="text/javascript">
+        document.querySelector("form").onsubmit = function() {
+            let suche = document.querySelector("input").value;
+            if (suche.length == 0) {
+                alert("Bitte Suchbegriff eingeben!");
+            } else {
+                let h1 = document.querySelector("h1"); 
+                h1.innerText = "Die Suche nach \"" + suche + "\" wurde noch nicht implementiert!";
+                h1.style["background-color"] = "yellow";
+            }
+            return false;
+        }
+    </script>
 
 </html>
